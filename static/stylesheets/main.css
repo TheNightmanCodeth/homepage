@@ -1,4 +1,10 @@
 .margin-top-links { margin-top:10px; }
-.margin-top-head { margin-top:65px; }
-.margin-bot-head { margin-bottom: 35px; }
+.margin-top-head { margin-top:95px; }
+.margin-bot-head { margin-bottom: 95px; }
 .margin-top-list { margin-top: 45px; }
+.margin-bot-list { margin-bottom: 45px; }
+
+.text-blue { color: #4285F4; }
+.text-red { color: #EA4335; }
+.text-yellow { color: #FBBC05; }
+.text-green { color: #34A853; }
