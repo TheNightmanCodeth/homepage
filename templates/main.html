@@ -12,25 +12,27 @@
   <div class="container-fluid">
     <!-- Links -->
     <div class="row margin-top-links">
-      <div class="col-md-1"><a href="https://twitter.com/joooyooo2">Twitter</a></div>
-      <div class="col-md-1 offset-md-10"><a href="https://github.com/TheNightmanCodeth">Github</a></div>
+      <div class="col-md-1 offset-md-2"><a href="https://twitter.com/joooyooo2">Twitter</a></div>
+      <div class="col-md-1 offset-md-6"><a href="https://github.com/TheNightmanCodeth"><p class="text-md-right">Github</p></a></div>
     </div>
     <!-- Photo and Text -->
-    <div class="row margin-top-img">
-      <!-- Image (To be updated) -->
+    <div class="row margin-top-img margin-bot-head">
+      <!-- Image (Will be updated when I get a better pic of me not looking like trash) -->
       <img src="static/img/default.png" class="img-fluid rounded mx-auto d-block" alt="Me">
+      <!-- Bio-ish -->
+      <p class="text-md-center text-sm-center text-lg-center margin-top-links">Joseph Diragi<br/>Software Engineering<br/>Android/Java - Flask/Python - Nodejs/Web</p>
     </div>
     {% for project in projects %}
     <div class="row margin-top-list">
       <!-- Project icon/image -->
-      <div class="col-md-2 offset-md-3">
-        <img src="static/img/default.png" class="img-fluid rounded" alt="The game">
+      <div class="col-md-1 offset-md-3 offset-lg-3 offset-sm-1 offset-xs-1">
+        <img src="{{ project.img }}" class="img rounded" alt="The game">
       </div>
       <!-- Project title & description & language tag -->
-      <div class="col-md-7">
+      <div class="col-md-4 offset-md-1 offset-lg-0">
         <h5>{{ project.title }}</h5>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <p>{{ project.description }}</p>
           </div>
         </div>

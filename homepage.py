@@ -46,6 +46,6 @@ def close_db(error):
 @homepage.route('/')
 def home():
     db = get_db()
-    query = db.execute('select title, description from projects order by id desc')
+    query = db.execute('select title, description, img, language from projects order by id desc')
     projects = query.fetchall()
     return render_template('main.html', projects=projects)
