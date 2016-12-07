@@ -12,15 +12,15 @@
   <div class="container-fluid">
     <!-- Links -->
     <div class="row margin-top-links">
-      <div class="col-md-1"><a href="https://twitter.com/joooyooo2">Twitter</a></div>
-      <div class="col-md-1 offset-md-10"><a href="https://github.com/TheNightmanCodeth"><p class="text-md-right">Github</p></a></div>
+      <div class="col-md-1 col-xs-1"><a href="https://twitter.com/joooyooo2">Twitter</a></div>
+      <div class="col-md-1 col-xs-1 offset-md-10 offset-xs-8"><a href="https://github.com/TheNightmanCodeth"><p class="text-xs-right text-md-right">Github</p></a></div>
     </div>
     <!-- Photo and Text -->
-    <div class="row margin-top-head margin-bot-head">
+    <div class="row margin-top-links margin-bot-head">
       <!-- Image (Will be updated when I get a better pic of me not looking like trash) -->
       <img src="static/img/default.png" class="img-fluid rounded mx-auto d-block" alt="Me">
       <!-- Bio-ish -->
-      <div class="text-md-center text-sm-center text-lg-center margin-top-links">
+      <div class="text-md-center text-sm-center text-lg-center text-xs-center margin-top-links">
         <h6 class="text-red">
           Joseph Diragi</h6> <h6 class="text-green">Software Engineering<h6/><h6 class="text-blue">Android/Java - Flask/Python - Nodejs/Web</h6>
       </div>
@@ -28,11 +28,11 @@
     {% for project in projects %}
     <div class="row margin-bot-list">
       <!-- Project icon/image -->
-      <div class="col-md-1 offset-md-3 offset-lg-4 offset-sm-1 offset-xs-1">
+      <div class="col-md-1 offset-md-3 offset-lg-4 offset-sm-1 offset-xs-3">
         <img src="{{ project.img }}" class="img rounded" alt="The game">
       </div>
       <!-- Project title & description & language tag -->
-      <div class="col-md-3 offset-md-1 offset-lg-0">
+      <div class="col-md-3 offset-md-1 offset-lg-0 margin-top-list">
         <h5><a href="{{project.repo}}">{{ project.title }}</a></h5>
         <div class="row">
           <div class="col-md-12">
