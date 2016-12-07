@@ -49,3 +49,6 @@ def home():
     query = db.execute('select title, description, repo, img, language from projects order by id desc')
     projects = query.fetchall()
     return render_template('main.html', projects=projects)
+
+if __name__ == "__main__":
+    homepage.run(host='0.0.0.0')
