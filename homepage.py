@@ -50,5 +50,9 @@ def home():
     projects = query.fetchall()
     return render_template('main.html', projects=projects)
 
+@homepage.route('/cirkit')
+def cirkit():
+    return reder_template('cirkit.html')
+
 if __name__ == "__main__":
     homepage.run(host='0.0.0.0')
