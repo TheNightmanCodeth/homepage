@@ -52,7 +52,7 @@ def home():
 
 @homepage.route('/cirkit')
 def cirkit():
-    return reder_template('cirkit.html')
+    return render_template('cirkit.html')
 
 if __name__ == "__main__":
     homepage.run(host='0.0.0.0')
