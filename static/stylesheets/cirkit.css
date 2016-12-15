@@ -16,7 +16,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+  background-color: rgba(29,165,54,1);
 }
 body {
   color: #fff;
