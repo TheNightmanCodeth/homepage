@@ -18,25 +18,26 @@
     </div>
     <!-- Photo and Text -->
     <div class="row margin-top-links margin-bot-head">
-      <!-- Image (Will be updated when I get a better pic of me not looking like trash) -->
+      <!-- Image -->
       <img src="https://avatars3.githubusercontent.com/u/6336819?v=3&s=200" class="img-fluid rounded mx-auto d-block" alt="Me">
       <!-- Bio-ish -->
       <div class="text-md-center text-sm-center text-lg-center text-xs-center margin-top-links">
-        <h6 class="text-red">
-          Joseph Diragi</h6> <h6 class="text-green">Software Engineering<h6/><h6 class="text-blue">Android/Java - Flask/Python - Nodejs/Web</h6>
+        <h6 class="text-red">Joseph Diragi</h6>
+        <h6 class="text-green">Software Engineering</h6>
+        <h6 class="text-blue">Android/Java - Flask/Python - Nodejs/Web</h6>
       </div>
     </div>
     {% for project in projects %}
     <div class="row margin-bot-list">
       <!-- Project icon/image -->
-      <div class="col-md-1 offset-md-3 offset-lg-4 offset-sm-1 offset-xs-3">
+      <div class="col-md-1 text-xs-center offset-md-3 offset-lg-4 offset-sm-1">
         <img src="{{ project.img }}" class="img rounded" alt="The game">
       </div>
       <!-- Project title & description & language tag -->
-      <div class="col-md-6 offset-md-1">
+      <div class="col-md-6 margin-top-list text-xs-center text-md-left offset-md-1 offset-lg-1 offset-xl-0">
         <h5><a href="{{project.repo}}">{{ project.title }}</a></h5>
         <div class="row">
-          <div class="col-lg-5 col-md-7">
+          <div class="col-lg-5 col-md-7 col-xs-12">
             <p class="text-blue">{{ project.description }}</p>
           </div>
         </div>
