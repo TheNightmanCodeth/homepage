@@ -56,7 +56,7 @@ def cirkit():
 
 @homepage.route('/maddie-is-dumb/<path:img>')
 def maddiendtflw(img):
-    return send_from_directory('static/img', img)
+    return send_from_directory('static/img/mad', img)
 
 if __name__ == "__main__":
-    homepage.run(host='0.0.0.0')
+    homepage.run(host='0.0.0.0', debug=True)
