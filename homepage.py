@@ -1,7 +1,7 @@
 import os
 import sqlite3
-from flask import Flask, request, session, g, redirect, url_for, abort, render_template
-homepage = Flask(__name__)
+from flask import Flask, request, session, g, redirect, url_for, abort, render_template, send_from_directory
+homepage = Flask(__name__, static_url_path='/static')
 homepage.config.from_object(__name__)
 
 homepage.config.update(dict(
@@ -53,6 +53,10 @@ def home():
 @homepage.route('/cirkit')
 def cirkit():
     return render_template('cirkit.html')
+
+@homepage.route('/maddie-is-dumb/<path:img>')
+def maddiendtflw(img):
+    return send_from_directory('static/img', img)
 
 if __name__ == "__main__":
     homepage.run(host='0.0.0.0')
