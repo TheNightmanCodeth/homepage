@@ -58,5 +58,9 @@ def cirkit():
 def maddiendtflw(img):
     return send_from_directory('static/img/mad', img)
 
+@homepage.route('/img/<path:img>')
+def retimg(img):
+    return send_from_directory('static/img', img)
+
 if __name__ == "__main__":
     homepage.run(host='0.0.0.0', debug=True)
