@@ -12,7 +12,7 @@ homepage.config.update(dict(
     PASSWORD='password'
 ))
 homepage.config.from_envvar('NIGHTMAN_SETTINGS', silent=True)
-homepage.config['UPLOAD_FOLDER'] = '/uploads'
+homepage.config['UPLOAD_FOLDER'] = 'uploads/'
 
 def hook_db():
     """"Connects to sql database"""
@@ -61,7 +61,7 @@ def upload():
         file = request.files['file']
         if file:
             filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            file.save(os.path.join(homepage.config['UPLOAD_FOLDER'], filename))
             return jsonify({"Success": "File received!"})
     return render_template('ul.html')
 
