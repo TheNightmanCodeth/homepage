@@ -1,6 +1,7 @@
 import os
 import sqlite3
-from flask import Flask, request, session, g, redirect, url_for, abort, render_template, send_from_directory
+from flask import Flask, request, session, g, redirect, url_for, abort, render_template, send_from_directory, jsonify
+from werkzeug.utils import secure_filename
 homepage = Flask(__name__, static_url_path='/static')
 homepage.config.from_object(__name__)
 
@@ -11,6 +12,7 @@ homepage.config.update(dict(
     PASSWORD='password'
 ))
 homepage.config.from_envvar('NIGHTMAN_SETTINGS', silent=True)
+homepage.config['UPLOAD_FOLDER'] = '/uploads'
 
 def hook_db():
     """"Connects to sql database"""
@@ -49,6 +51,19 @@ def home():
     query = db.execute('select title, description, repo, img, language from projects order by id desc')
     projects = query.fetchall()
     return render_template('main.html', projects=projects)
+
+@homepage.route('/upload', methods=['GET', 'POST'])
+def upload():
+    if request.method == 'POST':
+        if 'file' not in request.files:
+            flash('No file!!')
+            return jsonify({"error": "no file attached"})
+        file = request.files['file']
+        if file:
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            return jsonify({"Success": "File received!"})
+    return render_template('ul.html')
 
 @homepage.route('/cirkit')
 def cirkit():
