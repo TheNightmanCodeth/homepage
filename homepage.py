@@ -65,6 +65,10 @@ def upload():
             return jsonify({"Success": "File received!"})
     return render_template('ul.html')
 
+@homepage.route('/get-file/<path:file>')
+def get_file(file):
+    return send_from_directory('uploads', file)
+
 @homepage.route('/cirkit')
 def cirkit():
     return render_template('cirkit.html')
