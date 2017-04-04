@@ -29,19 +29,23 @@
     </div>
     {% for project in projects %}
     <div class="row margin-bot-list">
+      <div class="row"
       <!-- Project icon/image -->
-      <div class="col-md-1 text-xs-center offset-md-3 offset-lg-4 offset-sm-1">
+      <div class="text-xs-center text-md-center">
         <img src="{{ project.img }}" class="img rounded" width="140" height="140" alt="The game">
       </div>
+      </div>
+      <div class="row">
       <!-- Project title & description & language tag -->
-      <div class="col-md-6 margin-top-list text-xs-center text-md-left offset-md-1 offset-lg-1 offset-xl-0">
+      <div class=" margin-top-list text-xs-center text-s-center text-md-center">
         <h5><a href="{{project.repo}}">{{ project.title }}</a></h5>
         <div class="row">
-          <div class="col-lg-5 col-md-7 col-xs-12">
+          <div class="text-xs-center offset-xs-3 offset-md-4 col-lg-4 col-md-4 col-s-6 col-xs-6">
             <p class="text-blue">{{ project.description }}</p>
           </div>
         </div>
       </div>
+    </div>
     </div>
     {% else %}
     <h1 class="margin-top-list">Uh oh!</h1>
