@@ -1,0 +1,2 @@
+### Ignore the WSGI.py script, since development wsgi should differ from deployed
+wsgi.py
