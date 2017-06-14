@@ -17,3 +17,13 @@ def projects():
 def forhire():
     return render_template('coming_soon.html', context="for-hire")
 
+#CloverOS - DEMO MODE
+@app.route('/CloverOS')
+def clover_os():
+    return render_template('main.html', context="about")
+
+#CloverOS - Downloads - DEMO MODE
+@app.route('/CloverOS/get-clover')
+def get_clover():
+    return render_template('get-clover.html', context="download")
+
