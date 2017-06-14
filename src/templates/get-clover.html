@@ -4,6 +4,21 @@
 
 {% block content %}
 
+<div class="container">
+	<br /><br />
+	<h1>Get CloverOS</h1>
+	<span class="text-muted" style="font-size: 28px">The CloverOS liveCD is ready to go! Grab it while it's hot!</span><br />
+	<a role="button" class="btn btn-outline-success" href="https://cloveros.ga/s/CloverOS-x86_64-20170614.iso">Download</a><br /><br />
+	
+	<p>Just write the iso to a flash drive:</p>
+	<div class="card">
+		<div class="card-block">
+			dd if=/path/to/CloverOS-x86_64-xxx.iso of=/dev/usb status=progress bs=4M; sync
+		</div>
+	</div><br /><br />
 
+	<p>Or use an image writer like <a href="https://unetbootin.github.io/">Universal Netboot Installer</a></p>
+	
+</div>
 
 {% endblock %}
