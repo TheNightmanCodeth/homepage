@@ -1,0 +1,77 @@
+.jumbotron {
+  height: 350px;
+  border-radius: 0px;
+  background-image: url("header.jpg");
+  background-position: center center;
+  background-size: cover;
+  color: white;
+  text-shadow: black 0.3em 0.3em 0.3em;
+}
+
+.mobile-sense {
+  /*font-size: 26px;*/
+}
+@media (min-width:300px) {
+  .mobile-sense {
+    font-size: 16px;
+  }
+}
+@media (min-width:576px) {
+  .mobile-sense {
+    font-size: 22px;
+  }
+}
+@media (min-width:768px) {
+  .mobile-sense {
+    font-size: 24px;
+  }
+}
+@media (min-width:992px) {
+  .mobile-sense {
+    font-size: 34px;
+  }
+}
+
+/* Center horizontaly */
+.center {
+  text-align: center;
+}
+
+/* Center align the text within the three columns below the jumbotron */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
